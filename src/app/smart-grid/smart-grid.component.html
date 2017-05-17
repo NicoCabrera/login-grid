@@ -1,0 +1,6 @@
+<ul class="nav nav-tabs">
+  <li role="presentation"><a routerLink="/grid">Grilla</a></li>
+  <li role="presentation"><a routerLink="/smart-grid">Smart Table Component ABM</a></li>
+  <li role="presentation"><a routerLink="/register">Alta</a></li>
+</ul>
+<ng2-smart-table [settings]="settings"  (createConfirm)="insert($event)"  (editConfirm)="update($event)" (deleteConfirm)="delete($event)"[source]="data" ></ng2-smart-table>

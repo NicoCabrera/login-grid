@@ -1,0 +1,50 @@
+<ul class="nav nav-tabs">
+  <li role="presentation"><a routerLink="/grid">Grilla</a></li>
+  <li role="presentation"><a routerLink="/smart-grid">Smart Table Component ABM</a></li>
+  <li role="presentation"><a routerLink="/register">Alta</a></li>
+</ul>
+
+<form [formGroup]="form">
+
+  <!-- input text-->
+  <div class="form-group">
+    <label>Nombre</label>
+    <input type="text" class="form-control"  placeholder="Nombre" [(ngModel)]="form.nombre" formControlName="nombre">
+  </div>
+  <!-- -->
+
+  <!-- input text-->
+  <div class="form-group">
+    <label>Apellido</label>
+    <input type="text" class="form-control"  placeholder="Apellido" [(ngModel)]="form.apellido" formControlName="apellido">
+  </div>
+  <!-- -->
+
+  <!-- input number-->
+  <div class="form-group">
+    <label>DNI</label>
+    <input type="number" class="form-control"  placeholder="Documento" [(ngModel)]="form.dni" formControlName="dni">
+  </div>
+  <!-- -->
+
+  <!-- input radio-->
+  <div class="radio">
+    <label>
+    <input type="radio" value="M" [(ngModel)]="form.sexo" formControlName="sexo">
+    Hombre
+  </label>
+  </div>
+  <!-- -->
+
+  <!-- input radio-->
+  <div class="radio">
+    <label>
+    <input type="radio" value="F" [(ngModel)]="form.sexo" formControlName="sexo">
+    Mujer
+  </label>
+  </div>
+  <!-- -->
+
+  <button type="submit" class="btn btn-default" (click)="insert()" [disabled]="!form.valid">Registrar</button>
+
+</form>

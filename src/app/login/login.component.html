@@ -1,0 +1,21 @@
+<form [formGroup]="form" novalidate>
+  <!-- Input text -->
+  <div class="form-group">
+    <label for="usernameExample">Username</label>
+    <input type="text" class="form-control" placeholder="Username" [(ngModel)]="form.username" formControlName="username">
+  </div>
+  <!-- -->
+
+  <!-- Input password-->
+  <div class="form-group">
+    <label for="passwordExample">Password</label>
+    <input type="password" class="form-control" placeholder="Password" [(ngModel)]="form.password" formControlName="password">
+  </div>
+  <!-- -->
+
+  <!-- Buttons -->
+  <!-- Submit -->
+  <button type="submit" class="btn btn-success" (click)="showObjectData()" [disabled]="!form.valid">Submit</button>
+  <!-- Reset -->
+  <button type="reset" class="btn btn-danger">Reset</button>
+</form>
